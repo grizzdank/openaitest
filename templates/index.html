@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with GPT</title>
+</head>
+<body>
+    <h1>Chat with GPT</h1>
+    <form method="POST">
+        <label for="prompt">What is your question?</label>
+        <input type="text" name="prompt" required>
+        <button type="submit">Ask</button>
+    </form>
+    {% if response %}
+    <p>Response: {{ response }}</p>
+    {% endif %}
+
+    <!-- Quit Button -->
+    <form action="/quit" method="post" style="margin-top: 20px;">
+        <button type="submit">Quit</button>
+    </form>
+</body>
+</html>
