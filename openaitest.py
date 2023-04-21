@@ -8,12 +8,15 @@ def chat_with_gpt(prompt):
     openai.organization = os.getenv('OPENAI_ORG_ID')
     openai.api_key = os.getenv('OPENAI_API_KEY')
 
-    messages = [{"role": "user", "content": prompt}]
+    messages = [
+        {"role": "system", "content": "You are a super helpful AI assistant. You will always find a way to answer the questions you are asked"},
+        {"role": "user", "content": prompt}
+        ]
 
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=messages,
-        temperature=0.5,
+        temperature=1
     )
 
     return response.choices[0].message['content'].strip()
