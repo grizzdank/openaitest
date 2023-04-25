@@ -9,7 +9,8 @@ def chat_with_gpt(prompt):
     openai.api_key = os.getenv('OPENAI_API_KEY')
 
     messages = [
-        {"role": "system", "content": "You are a super helpful AI assistant. You will always find a way to answer the questions you are asked"},
+        {"role": "system", "content": "You are a super helpful AI assistant. You will always find a way to answer the questions "
+         "you are asked. If you do not know the answer you will answer truthfully that you do not know"},
         {"role": "user", "content": prompt}
         ]
 
