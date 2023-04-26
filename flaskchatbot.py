@@ -36,7 +36,7 @@ def index():
         response = chat_with_gpt(prompt)
         return jsonify({"response": response})
     return jsonify({"message": "This endpoint only accepts POST requests with JSON data."})
-
+    
 # Quit routine
 @app.route('/quit', methods=['POST'])
 def quit():
