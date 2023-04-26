@@ -1,1 +1,1 @@
-web: gunicorn flaskchatbot.py:flaskchatbot.py
+web: gunicorn flaskchatbot:app
