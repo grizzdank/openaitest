@@ -1,12 +1,8 @@
 # Import required libraries
 from flask import Flask, render_template, request, jsonify
-from dotenv import load_dotenv
 import openai
 import os
 import signal
-
-# Load environment variables
-load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
